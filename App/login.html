@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+   <head>
+      <meta charset="utf-8">
+      <title>Animated Login Form</title>
+      <link rel="stylesheet" href="style.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+   </head>
+   <script>
+      function submit(){
+         login.submit();
+      }
+   </script>
+   <body style="background-image: url('Cognimeet_Assets/Login/MacBookPro-15.png');">
+      <div class="container">
+         <header><img src="Cognimeet_Assets/Login/Group 2302.png" width="500px" /></header>
+         <div class="login-heading">
+            Login
+        </div>
+         <form action ="join.html" name="login" id="login">
+            <div class="input-field">
+               <input class="emailpic" placeholder="Email" type="text" required>
+            </div>
+            <div class="input-field">
+               <input class="passwordpic" type="password" placeholder="Password" required>
+               <span class="show"> <img src="Cognimeet_Assets/Login/eye-make-up-1.png"/> </span>
+            </div>
+            <div class="forgotpassword">
+                Forgot password?
+            </div>
+            <div class="button">
+               <button onclick="submit();">Login</button>
+            </div>
+        </form>
+      </div>
+      <script>
+         var input = document.querySelector('.passwordpic');
+         var show = document.querySelector('.show');
+         show.addEventListener('click', active);
+         function active(){
+           if(input.type === "password"){
+             input.type = "text";
+             show.style.color = "#1DA1F2";
+            //  show.textContent = "HIDE";
+           }else{
+             input.type = "password";
+            //  show.textContent = "SHOW";
+             show.style.color = "#111";
+           }
+         }
+      </script>
+   </body>
+</html>
